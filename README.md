@@ -41,7 +41,7 @@ print("  X P(X=x) Obs.Fr  Ex.Fre   xi ")
 print("----------------------------------")
 for x in range(7):
     c=math.factorial(n)/(math.factorial(x)*math.factorial(n-x))
-    Pr.append(c*p*x*q*(n-x))
+    Pr.append(c*p**x*q**(n-x))
     E.append(Pr[x]*N)
     xi.append((f[x]-E[x])**2/E[x])
     print("%2.2f %2.2f  %4.2f   %3.2f  %3.2f"%(x,Pr[x],f[x],E[x],xi[x]))
@@ -57,7 +57,7 @@ else:
 ```
 
 # Output:
-![output](https://user-images.githubusercontent.com/75235747/166329643-fe4f4aa4-9c02-46dc-b808-86b239cd27c3.JPG)
+![o1](https://user-images.githubusercontent.com/75235747/168960831-93050357-f8ef-4b56-902f-4af568f40a7b.JPG)
 
 # Results:
 Thus, fitting poisson distribution for the given frequencey distribution is verified.
